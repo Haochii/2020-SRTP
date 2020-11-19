@@ -1,0 +1,10 @@
+影创UnitySDK，官方名称：ShadowSDK
+
+SDK version number: ShadowSDK3.0.1
+
+Recommended Unity Version:2019.2.3f1
+
+Patch001:20200605
+1:Support ArmV8
+2:Support V01
+3:Bind BigCore for performance
