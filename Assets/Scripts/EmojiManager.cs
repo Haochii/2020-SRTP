@@ -35,12 +35,11 @@ public class EmojiManager : MonoBehaviour
 
     public void EmitAllEmoji()
     {
-
         //Let template work
         for(int i=0;i<emojiTemplates.Length; i++)
-        { 
+        {   
             if(emojiTemplates[i].GetComponent<EmojiTemplate>().isEditing == true)
-            {        
+            {
                 int index = emojiTemplates[i].GetComponent<EmojiTemplate>().emojiType;
 
                 GameObject emoji = Instantiate(prefabEmoji[index], emojiTemplates[i].GetComponent<Transform>().position, emojiTemplates[i].GetComponent<Transform>().rotation);
@@ -57,6 +56,15 @@ public class EmojiManager : MonoBehaviour
                 emojiTemplates[i].GetComponent<EmojiTemplate>().reset();
             }
         }
+    }
+
+    public void ClearAllEmoji()
+    {
+        for (int i=0; i<emittedEmoji.Count; i++)
+        {
+            Destroy(emittedEmoji[i]);
+        }
+        emittedEmoji.Clear();
     }
 
     private SaveEmojis CreateSaveEmojisObject()
@@ -118,6 +126,7 @@ public class EmojiManager : MonoBehaviour
         }
 
     }
+
     public void Quit()
     {
         SavetoFile();
