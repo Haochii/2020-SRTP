@@ -1,0 +1,10 @@
+Library/
+.vs/
+obj/
+Logs/
+2020-SRTP.sln
+AirEmoji SDK4.sln
+Assembly-CSharp-Editor.csproj
+Assembly-CSharp.csproj
+VuforiaEditorScripts.csproj
+VuforiaScripts.csproj

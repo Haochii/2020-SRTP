@@ -4,8 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Editing
-  - SvrCamera
   - Template
   layers:
   - Default
@@ -16,8 +14,8 @@ TagManager:
   - UI
   - 
   - 
-  - focus
-  - no light
+  - 
+  - 
   - 
   - 
   - 
