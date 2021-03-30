@@ -39,7 +39,7 @@ public class EmojiTemplate : MonoBehaviour
 
     public void editing()
     {
-        isEditing = true;
+        this.isEditing = true;
         Debug.Log("Editing Template");
     }
 }

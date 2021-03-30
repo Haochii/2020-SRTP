@@ -1,9 +1,7 @@
-﻿using System.Collections;
+﻿using SC.XR.Unity;
 using System.Collections.Generic;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using UnityEngine;
-using SC.XR.Unity;
 
 public class EmojiManager : MonoBehaviour
 {
@@ -24,6 +22,7 @@ public class EmojiManager : MonoBehaviour
         emojiTemplates = GameObject.FindGameObjectsWithTag("Template");
     }
 
+
     // Update is called once per frame
     void Update()
     {
@@ -32,30 +31,56 @@ public class EmojiManager : MonoBehaviour
             LoadFile();
             isLoaded = true;
         }
+        gotocenter();
     }
 
+    private void gotocenter()
+    {
+        GameObject center = GameObject.FindWithTag("sculpture");
+        foreach(GameObject emoji in emittedEmoji)
+        {
+            if(emoji != null && emoji.GetComponent<Emoji>().emojiType != 1)
+            {
+                if ((emoji.GetComponent<Transform>().position - center.GetComponent<Transform>().position).sqrMagnitude > 0.4 * 0.4)
+                {
+                    emoji.GetComponent<Rigidbody>().AddForce((center.GetComponent<Transform>().position - emoji.GetComponent<Transform>().position).normalized);
+                }
+            }
+        }
+    }
+     
     public void EmitAllEmoji()
     {
+        
         //Let template work
         for (int i = 0; i < emojiTemplates.Length; i++)
         {
             if (emojiTemplates[i].GetComponent<EmojiTemplate>().isEditing == true)
             {
-                int index = emojiTemplates[i].GetComponent<EmojiTemplate>().emojiType;
+                int emittedType = emojiTemplates[i].GetComponent<EmojiTemplate>().emojiType;
 
-                GameObject emoji = Instantiate(prefabEmoji[index], emojiTemplates[i].GetComponent<Transform>().position, emojiTemplates[i].GetComponent<Transform>().rotation);
-                emoji.transform.localScale = emojiTemplates[i].GetComponent<Transform>().localScale;
+                for (int j=0; j<prefabEmoji.Count; j++)
+                {
+                    if(emittedType == prefabEmoji[j].GetComponent<Emoji>().emojiType)
+                    {
 
-                Rigidbody rigidBody = emoji.GetComponent<Rigidbody>();
-                float vx = Random.Range(emojiMinVelocity, emojiMaxVelocity);
-                float vy = Random.Range(emojiMinVelocity, emojiMaxVelocity);
-                float vz = Random.Range(emojiMinVelocity, emojiMaxVelocity);
-                rigidBody.velocity = new Vector3(vx, vy, vz);
+                        GameObject emoji = Instantiate(prefabEmoji[j], emojiTemplates[i].GetComponent<Transform>().position, emojiTemplates[i].GetComponent<Transform>().rotation);
+                        //emoji.transform.localScale = emojiTemplates[i].GetComponent<Transform>().localScale;
 
-                emittedEmoji.Add(emoji);
+                        Rigidbody rigidBody = emoji.GetComponent<Rigidbody>();
+                        float vx = Random.Range(emojiMinVelocity, emojiMaxVelocity);
+                        float vy = Random.Range(emojiMinVelocity, emojiMaxVelocity);
+                        float vz = Random.Range(emojiMinVelocity, emojiMaxVelocity);
+                        rigidBody.velocity = new Vector3(vx, vy, vz);
 
-                emojiTemplates[i].GetComponent<EmojiTemplate>().reset();
-                emojiTemplates[i].GetComponent<CameraFollower>().enabled = true;
+                        emittedEmoji.Add(emoji);
+
+                        emojiTemplates[i].GetComponent<EmojiTemplate>().reset();
+                        emojiTemplates[i].GetComponent<CameraFollower>().enabled = true;
+
+                        //Debug.Log("Emit Pressed");
+                    }
+                }
             }
         }
     }
@@ -75,11 +100,14 @@ public class EmojiManager : MonoBehaviour
 
         for (int i = 0; i < emittedEmoji.Count; i++)
         {
-            saveEmojis.EmojiTypeList.Add(emittedEmoji[i].GetComponent<Emoji>().emojiType);
-            saveEmojis.EmojiPosList.Add(emittedEmoji[i].GetComponent<Transform>().position);
-            saveEmojis.EmojiRotList.Add(emittedEmoji[i].GetComponent<Transform>().rotation);
-            saveEmojis.EmojiScaleList.Add(emittedEmoji[i].GetComponent<Transform>().localScale);
-            saveEmojis.EmojiVelocityList.Add(emittedEmoji[i].GetComponent<Rigidbody>().velocity);
+            if(emittedEmoji[i] != null && emittedEmoji[i].GetComponent<Emoji>().emojiType != 1) // is not bomb
+            {
+                saveEmojis.EmojiTypeList.Add(emittedEmoji[i].GetComponent<Emoji>().emojiType);
+                saveEmojis.EmojiPosList.Add(emittedEmoji[i].GetComponent<Transform>().position);
+                saveEmojis.EmojiRotList.Add(emittedEmoji[i].GetComponent<Transform>().rotation);
+                saveEmojis.EmojiScaleList.Add(emittedEmoji[i].GetComponent<Transform>().localScale);
+                saveEmojis.EmojiVelocityList.Add(emittedEmoji[i].GetComponent<Rigidbody>().velocity);
+            }     
         }
         Debug.Log("Emojis Saved");
         return saveEmojis;
@@ -108,6 +136,7 @@ public class EmojiManager : MonoBehaviour
     public void LoadFile()
     {
         string filePath = Path.Combine(path, fileName);
+        Debug.Log("filepath:"+ filePath);
         if (File.Exists(filePath))
         {
             Debug.Log("Start Read");
@@ -118,7 +147,7 @@ public class EmojiManager : MonoBehaviour
             Debug.Log(json);
             for (int i = 0; i < save.EmojiTypeList.Count; i++)
             {
-                GameObject emoji = Instantiate(prefabEmoji[save.EmojiTypeList[i]], save.EmojiPosList[i], save.EmojiRotList[i]);
+                GameObject emoji = Instantiate(prefabEmoji[save.EmojiTypeList[i]-1], save.EmojiPosList[i], save.EmojiRotList[i]);
                 emoji.GetComponent<Transform>().localScale = save.EmojiScaleList[i];
 
                 Rigidbody rigidbody = emoji.GetComponent<Rigidbody>();
@@ -128,6 +157,7 @@ public class EmojiManager : MonoBehaviour
         }
 
     }
+
 
     public void Quit()
     {

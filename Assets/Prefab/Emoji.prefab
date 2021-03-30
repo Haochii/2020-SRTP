@@ -4705,7 +4705,6 @@ GameObject:
   - component: {fileID: 10248038120020804}
   - component: {fileID: 4873700273337299126}
   - component: {fileID: -144765480992110337}
-  - component: {fileID: 5267417637441682437}
   m_Layer: 0
   m_Name: Emoji
   m_TagString: Template
@@ -9447,18 +9446,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &5267417637441682437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5886513568306180684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c8d0d6d730eb6e439379a3f95fd2bcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5923118277891960549
 GameObject:
   m_ObjectHideFlags: 0

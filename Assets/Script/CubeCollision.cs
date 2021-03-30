@@ -5,17 +5,32 @@ using UnityEngine;
 
 public class CubeCollision : MonoBehaviour
 {
-    float ttl = 2.0f;
+    public float TimeToDes = 2.0f;
+    public float TotalTime = 5.0f;
+    private bool isExploded = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(Time());
     }
 
-    // Update is called once per frame
+    IEnumerator Time()
+    {
+        while (TotalTime >= 0)
+        {
+            yield return new WaitForSeconds(1);
+            TotalTime--;
+        }
+    }
+
     void Update()
     {
-        
+        if (TotalTime <= 0)
+        {
+            //Debug.Log("Self Destory")
+            playAnim();
+            this.Invoke("des", TimeToDes);
+        }
     }
 
     public void des()
@@ -23,14 +38,23 @@ public class CubeCollision : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    private void playAnim()
+    {
+
+            ParticleSystem exp = GetComponent<ParticleSystem>();
+            //AudioSource ad = GetComponent<AudioSource>();
+            exp.Play();
+            GameObject.Find("bomb(Clone)").GetComponent<AudioSystem>().PlayAudioOneShot(GameObject.Find("bomb(Clone)"), SCAudiosConfig.AudioType.Explode, 1);
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "sculpture")
         {
-            ParticleSystem exp = GetComponent<ParticleSystem>();
-            exp.Play();
-            this.Invoke("des", ttl);            
-            Debug.Log("OK");
+            playAnim();
+            this.Invoke("des", TimeToDes);            
+            //Debug.Log("OK");
         }
+
     }
 }

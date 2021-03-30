@@ -7,4 +7,6 @@ using UnityEngine.EventSystems;
 public class Emoji : MonoBehaviour
 {
     public int emojiType = 0;
+
+
 }

@@ -32,6 +32,7 @@ public class SCAudiosConfig:ScriptableObject {
         Slider_Release,
         Tap,
         Voice_Confirmation,
+        Explode,
     }
 
 
