@@ -1,9 +1,9 @@
 {
   "dependencies": {
     "com.ptc.vuforia.engine": {
-      "version": "file:C:/Users/Lhc/OneDrive/SRTP/Resource/com.ptc.vuforia.engine",
+      "version": "file:com.ptc.vuforia.engine",
       "depth": 0,
-      "source": "local",
+      "source": "embedded",
       "dependencies": {
         "com.unity.ugui": "1.0.0"
       }
