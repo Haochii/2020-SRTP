@@ -265,6 +265,9 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="PackageManagerAssembly">
+      <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Assets/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll</HintPath>
+    </Reference>
     <Reference Include="LitJson">
       <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Assets/SDK/Common/Plugins/LitJson.dll</HintPath>
     </Reference>
@@ -284,13 +287,10 @@
       <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Assets/SDK/Common/Plugins/DOTween/Editor/DOTweenEditor.dll</HintPath>
     </Reference>
     <Reference Include="Vuforia.UnityExtensions.Editor">
-      <HintPath>C:/Users/Lhc/OneDrive/SRTP/Resource/com.ptc.vuforia.engine/Vuforia/Plugins/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>
+      <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Packages/com.ptc.vuforia.engine/Vuforia/Plugins/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Vuforia.UnityExtensions">
-      <HintPath>C:/Users/Lhc/OneDrive/SRTP/Resource/com.ptc.vuforia.engine/Vuforia/Plugins/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
-    </Reference>
-    <Reference Include="PackageManagerAssembly">
-      <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Assets/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll</HintPath>
+      <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Packages/com.ptc.vuforia.engine/Vuforia/Plugins/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>

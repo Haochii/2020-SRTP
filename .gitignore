@@ -8,3 +8,8 @@ Assembly-CSharp-Editor.csproj
 Assembly-CSharp.csproj
 VuforiaEditorScripts.csproj
 VuforiaScripts.csproj
+Packages/com.ptc.vuforia.engine
+VuforiaPackageTests.csproj
+Demos.StandardShader.Inspectors.csproj
+Demos.StandardShader.Inspectors.csproj
+*.apk
