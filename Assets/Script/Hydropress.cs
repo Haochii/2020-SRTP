@@ -34,6 +34,7 @@ public class Hydropress : MonoBehaviour
     public void DisableGravity()
     {
         this.GetComponent<Rigidbody>().useGravity = false;
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 0.0f, 0.0f);
     }
     
 }

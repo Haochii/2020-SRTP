@@ -44,7 +44,9 @@ public class CubeCollision : MonoBehaviour
             ParticleSystem exp = GetComponent<ParticleSystem>();
             //AudioSource ad = GetComponent<AudioSource>();
             exp.Play();
-            GameObject.Find("bomb(Clone)").GetComponent<AudioSystem>().PlayAudioOneShot(GameObject.Find("bomb(Clone)"), SCAudiosConfig.AudioType.Explode, 1);
+
+        //TODO    
+        GameObject.Find("bomb(Clone)").GetComponent<AudioSystem>().PlayAudioOneShot(GameObject.Find("bomb(Clone)"), SCAudiosConfig.AudioType.Explode, 1);
     }
 
     private void OnCollisionEnter(Collision collision)

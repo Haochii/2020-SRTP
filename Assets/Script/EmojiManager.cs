@@ -51,7 +51,7 @@ public class EmojiManager : MonoBehaviour
      
     public void EmitAllEmoji()
     {
-        
+        Debug.Log("Emit");
         //Let template work
         for (int i = 0; i < emojiTemplates.Length; i++)
         {

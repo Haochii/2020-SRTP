@@ -5,9 +5,11 @@ using System;
 
 
 [CreateAssetMenu(menuName = "SCMenu/SCAudiosConfig")]
-public class SCAudiosConfig:ScriptableObject {
+public class SCAudiosConfig : ScriptableObject
+{
 
-    public enum AudioType {
+    public enum AudioType
+    {
         Null,
         ButtonPress,
         ButtonUnpress,
@@ -37,7 +39,8 @@ public class SCAudiosConfig:ScriptableObject {
 
 
     [Serializable]
-    public class SCAudio {
+    public class SCAudio
+    {
         public AudioType audioType;
         public AudioClip audioClip;
         [Range(0.2f, 1)]

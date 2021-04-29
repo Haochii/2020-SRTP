@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3B0861E3-4549-B996-7158-30A9A2B93411}</ProjectGuid>
+    <ProjectGuid>{1EB7392B-2C5F-BB27-10D3-E3E93ACF15AC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Demos.StandardShader.Inspectors</AssemblyName>
@@ -266,34 +266,34 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="PackageManagerAssembly">
-      <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Assets/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll</HintPath>
+      <HintPath>C:/Users/Lhc/Desktop/2020-SRTP-Primitive/Assets/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll</HintPath>
     </Reference>
     <Reference Include="LitJson">
-      <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Assets/SDK/Common/Plugins/LitJson.dll</HintPath>
+      <HintPath>C:/Users/Lhc/Desktop/2020-SRTP-Primitive/Assets/SDK/Common/Plugins/LitJson.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Assets/SDK/Common/Plugins/DOTween/DOTween.dll</HintPath>
+      <HintPath>C:/Users/Lhc/Desktop/2020-SRTP-Primitive/Assets/SDK/Common/Plugins/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="DOTween43">
-      <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Assets/SDK/Common/Plugins/DOTween/DOTween43.dll</HintPath>
+      <HintPath>C:/Users/Lhc/Desktop/2020-SRTP-Primitive/Assets/SDK/Common/Plugins/DOTween/DOTween43.dll</HintPath>
     </Reference>
     <Reference Include="DOTween46">
-      <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Assets/SDK/Common/Plugins/DOTween/DOTween46.dll</HintPath>
+      <HintPath>C:/Users/Lhc/Desktop/2020-SRTP-Primitive/Assets/SDK/Common/Plugins/DOTween/DOTween46.dll</HintPath>
     </Reference>
     <Reference Include="DOTween50">
-      <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Assets/SDK/Common/Plugins/DOTween/DOTween50.dll</HintPath>
+      <HintPath>C:/Users/Lhc/Desktop/2020-SRTP-Primitive/Assets/SDK/Common/Plugins/DOTween/DOTween50.dll</HintPath>
     </Reference>
     <Reference Include="DOTweenEditor">
-      <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Assets/SDK/Common/Plugins/DOTween/Editor/DOTweenEditor.dll</HintPath>
+      <HintPath>C:/Users/Lhc/Desktop/2020-SRTP-Primitive/Assets/SDK/Common/Plugins/DOTween/Editor/DOTweenEditor.dll</HintPath>
     </Reference>
     <Reference Include="Vuforia.UnityExtensions.Editor">
-      <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Packages/com.ptc.vuforia.engine/Vuforia/Plugins/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>
+      <HintPath>C:/Users/Lhc/OneDrive/SRTP/Resource/com.ptc.vuforia.engine/Vuforia/Plugins/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Vuforia.UnityExtensions">
-      <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Packages/com.ptc.vuforia.engine/Vuforia/Plugins/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
+      <HintPath>C:/Users/Lhc/OneDrive/SRTP/Resource/com.ptc.vuforia.engine/Vuforia/Plugins/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>C:/Users/Lhc/Desktop/2020-SRTP-Primitive/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.22f1c1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -650,16 +650,16 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.22f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/Lhc/Desktop/2020-SRTP-Primitive/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/Lhc/Desktop/2020-SRTP-Primitive/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>C:/Users/Lhc/Desktop/2020-SRTP-Primitive/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>C:/Users/Lhc/Documents/GitHub/2020-SRTP/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>C:/Users/Lhc/Desktop/2020-SRTP-Primitive/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
